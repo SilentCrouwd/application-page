@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+/* 1. Standard-Variablen (Light Mode) */
+:root {
+  --color-primary: #37830c;
+  --color-secondary: #328360;
+  --color-border-color: #b1aeae;
+  --color-text-main: #020202;
+  --color-text-muted: #6b7280;
+  --color-inverted: white;
+  --color-card-color: #ffffff;
+  --color-bg-color-main: #e8ebdd;
+  --color-bg-header: rgba(199, 196, 196, 0.932);
+}
+
+/* 2. System-Dark-Mode überschreibt die Variablen */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #60a5fa;
+    --color-secondary: #818cf8;
+    --color-border-color: #151618;
+    --color-text-main: #f9fafb;
+    --color-text-muted: #9ca3af;
+    --color-card-color: #1f2937;
+    --color-bg-color-main: #111827;
+    --color-bg-header: rgb(102, 101, 101);
+    --color-inverted: white;
+  }
+}
+
+/* 3. Theme registriert die Utility-Klassen */
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-border-color: var(--color-border-color);
+  --color-text-main: var(--color-text-main);
+  --color-text-muted: var(--color-text-muted);
+  --color-card-color: var(--color-card-color);
+  --color-bg-color-main: var(--color-bg-color-main);
+  --color-bg-header: var(--color-bg-header);
+  --color-text-inverted: var(--color-inverted);
+  --background-image-hero-img: url("/src/assets/img/buisnessLady.webp");
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+}

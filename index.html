@@ -1,14 +1,214 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>application-page</title>
-    <link rel="stylesheet" href="/src/style.css" />
+    <title>Application-Page</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script type="module" src="src/main.js"></script>
   </head>
-  <body>
-    <div id="app" class="text-9xl">Hallo</div>
-    <script type="module" src="/src/main.js"></script>
+  <body class="bg-bg-color-main min-h-screen w-full xl:max-w-280 mx-auto">
+    <!-- HEADER BLOCK -->
+    <!--  -->
+    <header
+      class="md:opacity-0 md:hover:opacity-100 md:sticky md:top-0 md:left-0 md:z-50 bg-bg-header hover:transition-all duration-500 ease-in-out"
+    >
+      <div class="">
+        <nav class="">
+          <ul
+            class="header__menu flex justify-between sm:justify-center border-b border-border-color max-w-200 mx-auto"
+          >
+            <li
+              class="header__menu-item py-5 px-10 border-r border-border-color hover:bg-secondary hover:text-text-inverted hover:transition-all"
+            >
+              <a href="#about" class="header__menu-link">Home</a>
+            </li>
+
+            <li
+              class="header__menu-item py-5 px-10 border-r border-border-color hover:bg-secondary hover:text-text-inverted hover:transition-all"
+            >
+              <a href="#about" class="header__menu-link">About</a>
+            </li>
+
+            <li
+              class="header__menu-item py-5 px-10 border-r border-border-color hover:bg-secondary hover:text-text-inverted hover:transition-all"
+            >
+              <a href="#contact" class="header__menu-link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN BLOCK -->
+    <main class="main-content">
+      <!-- HERO SECTION BLOCK -->
+      <section class="hero">
+        <div class="hero__container h-[93vh]">
+          <div
+            class="hero__content bg-hero-img h-full bg-cover bg-position-[65%_center] flex flex-col justify-between max-w-200 mx-auto"
+          >
+            <h1
+              class="hero__title bg-bg-header/50 text-5xl text-text-inverted text-center"
+            >
+              Marie Mustermann
+            </h1>
+            <div class="">
+              <p
+                class="hero__subtitle bg-bg-header/40 text-text-inverted italic p-2"
+              >
+                Weil Erfolg immer mit Menschen beginnt. Sub-Headline: Als Head
+                of Human Resources verbinde ich strategisches HR-Management mit
+                einer Kultur, in der Talente über sich hinauswachsen
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn__hero__button--primary">Kontakt</a>
+          <a href="#about" class="btn btn__hero__button--secondary"
+            >Mehr erfahren</a
+          >
+        </div>
+      </section>
+      <section class="experience" id="about">
+        <div class="experience__container">
+          <div class="experience__content">
+            <img
+              class="experience__img"
+              src="assets/creativMeeting.jpg"
+              alt="creative Meeting"
+            />
+            <p class="experience__text">
+              <strong>Moderne Führung</strong>
+              <em
+                >bedeutet für mich, Räume für Vertrauen und persönliches
+                Wachstum zu schaffen. Starke Teams entstehen nicht von allein –
+                sie wachsen durch echten Zusammenhalt und eine gemeinsame
+                Vision. Als Führungskraft begleite ich Menschen auf Augenhöhe
+                und befähige sie, gemeinsam Großes zu erreichen.</em
+              >
+            </p>
+          </div>
+          <div class="experience__content experience__content--inverted">
+            <img
+              class="experience__img"
+              src="assets/teamMeeting.jpg"
+              alt="Team Meeting"
+            />
+            <p class="experience__text">
+              <strong>Für mich</strong
+              ><em
+                >steht der Mensch im Mittelpunkt jeder Strategie. Echtes
+                HR-Management lebt von Empathie, Offenheit und Wertschätzung.
+                Ich bin überzeugt: Erst durch gelebte Vielfalt und
+                unterschiedliche Perspektiven entstehen die Innovationen und die
+                Kultur, die Unternehmen langfristig erfolgreich und
+                zukunftsfähig machen.</em
+              >
+            </p>
+          </div>
+          <div class="experience__content">
+            <img
+              class="experience__img"
+              src="assets/vonObenMeeting.jpg"
+              alt="von Oben Meeting"
+            />
+            <p class="experience__text">
+              <strong>Neue Wege</strong>
+              <em>
+                entstehen, indem man sie geht. Mit kreativen Ansätzen und dem
+                Mut, eingetretene Pfade zu verlassen, knacke ich auch komplexe
+                HR-Herausforderungen. Für mich bedeutet Zielorientierung nicht
+                stures Festhalten an alten Mustern, sondern das Finden
+                innovativer, maßgeschneiderter Lösungen für den gemeinsamen
+                Erfolg.</em
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="contact__container">
+          <div class="contact__header">
+            <p class="contact__headline">Kontakt</p>
+          </div>
+
+          <div class="contact__btn-container">
+            <a href="https://de.linkedin.com" class="btn contact__btn"
+              ><svg
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="contact__svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"
+                /></svg></a
+            ><a href="https://www.instagram.com/" class="btn contact__btn"
+              ><svg
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="contact__svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+                /></svg
+            ></a>
+          </div>
+          <div class="contact__btn-container">
+            <a href="mailto:info@beispiel.de" class="btn contact__btn"
+              ><svg
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="contact__svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+                /></svg></a
+            ><a href="tel:+495535123456" class="btn contact__btn"
+              ><svg
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="contact__svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z"
+                /></svg
+            ></a>
+          </div>
+          <div class="contact__footer">
+            <p class="contact__text">
+              Große Ideen beginnen immer mit einem ersten Gespräch. Kontaktieren
+              Sie mich unkompliziert. Ich bin gespannt auf Ihre Perspektiven und
+              Herausforderungen.
+            </p>
+            <img
+              class="contact__img"
+              src="/assets/profilbild.png"
+              alt="Business Lady"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER BLOCK -->
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__copy">&copy; 2026 Alle Rechte vorbehalten.</p>
+        <ul class="footer__links">
+          <li class="footer__links-item">
+            <a href="#" class="footer__link">Impressum</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="#" class="footer__link">Datenschutz</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
