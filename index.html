@@ -7,36 +7,147 @@
     <link rel="stylesheet" href="src/style.css" />
     <script type="module" src="src/main.js"></script>
   </head>
-  <body class="bg-bg-color-main min-h-screen w-full xl:max-w-280 mx-auto">
+  <body class="">
     <!-- HEADER BLOCK -->
     <!--  -->
-    <header
-      class="md:opacity-0 md:hover:opacity-100 md:sticky md:top-0 md:left-0 md:z-50 bg-bg-header hover:transition-all duration-500 ease-in-out"
-    >
-      <div class="">
-        <nav class="">
+    <header class="header h-screen sm:overflow-hidden">
+      <div class="sm:h-full sm:grid sm:grid-cols-[2fr_1fr]">
+        <!-- Navigation (Mobil oben, ab sm rechts) -->
+        <nav
+          class="group/navbar py-4 sm:order-2 sm:py-0 sm:flex sm:items-start sm:justify-center transition-all"
+        >
           <ul
-            class="header__menu flex justify-between sm:justify-center border-b border-border-color max-w-200 mx-auto"
+            class="navbar__menue flex justify-evenly sm:flex-col sm:gap-15 sm:my-15 underline underline-offset-4"
           >
-            <li
-              class="header__menu-item py-5 px-10 border-r border-border-color hover:bg-secondary hover:text-text-inverted hover:transition-all"
-            >
-              <a href="#about" class="header__menu-link">Home</a>
+            <li>
+              <a
+                href="#about"
+                class="header__menu-link-1 text-3xl sm:text-5xl sm:opacity-0 sm:group-hover/navbar:opacity-100 duration-700"
+                >Home</a
+              >
             </li>
-
-            <li
-              class="header__menu-item py-5 px-10 border-r border-border-color hover:bg-secondary hover:text-text-inverted hover:transition-all"
-            >
-              <a href="#about" class="header__menu-link">About</a>
+            <li>
+              <a
+                href="#about"
+                class="header__menu-link-1 text-3xl sm:text-5xl sm:opacity-0 sm:group-hover/navbar:opacity-100 duration-700"
+                >About</a
+              >
             </li>
-
-            <li
-              class="header__menu-item py-5 px-10 border-r border-border-color hover:bg-secondary hover:text-text-inverted hover:transition-all"
-            >
-              <a href="#contact" class="header__menu-link">Kontakt</a>
+            <li>
+              <a
+                href="#contact"
+                class="header__menu-link-1 text-3xl sm:text-5xl sm:opacity-0 sm:group-hover/navbar:opacity-100 duration-700"
+              >
+                Kontakt</a
+              >
             </li>
           </ul>
         </nav>
+
+        <!-- Carousel (Mobil unter Nav, ab sm links & flexibel eingepasst) -->
+        <div
+          class="header__left sm:flex sm:flex-col sm:h-full sm:min-h-0 sm:order-1"
+        >
+          <!-- Scroll-Container -->
+          <div
+            class="py-4 gap-3 flex w-full overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none sm:flex-1 sm:min-h-0"
+          >
+            <div class="w-full shrink-0 snap-start relative sm:h-full">
+              <p
+                class="absolute bottom-0 w-full text-center text-3xl bg-card-color/50 p-5 text-text-main"
+              >
+                Marie Mustermann<br />
+                <span class="italic"> Head of Human Resources</span>
+              </p>
+              <img
+                id="slide-1"
+                class="object-cover w-full h-full"
+                src="/src/assets/img/hero_stand.webp"
+                alt="Profilbild 1"
+              />
+            </div>
+
+            <div class="w-full shrink-0 snap-start relative sm:h-full">
+              <p class="absolute top-0 p-5 bg-card-color/50">
+                <em>
+                  <strong>Weil Erfolg</strong> immer mit Menschen beginnt.
+                  Sub-Headline: Als Head of Human Resources verbinde ich
+                  strategisches HR-Management mit einer Kultur, in der Talente
+                  über sich hinauswachsen
+                </em>
+              </p>
+              <img
+                id="slide-2"
+                class="object-cover w-full h-full"
+                src="/src/assets/img/hero_leane.webp"
+                alt="Profilbild 2"
+              />
+            </div>
+
+            <div class="w-full shrink-0 relative snap-start sm:h-full">
+              <p
+                class="experience__text absolute bottom-0 bg-card-color/50 p-5"
+              >
+                <strong>Moderne Führung</strong>
+                <em
+                  >bedeutet für mich, Räume für Vertrauen und persönliches
+                  Wachstum zu schaffen. Starke Teams entstehen nicht von allein
+                  – sie wachsen durch echten Zusammenhalt und eine gemeinsame
+                  Vision. Als Führungskraft begleite ich Menschen auf Augenhöhe
+                  und befähige sie, gemeinsam Großes zu erreichen.</em
+                >
+              </p>
+              <img
+                id="slide-3"
+                class="object-cover w-full h-full"
+                src="/src/assets/img/hero_desk.webp"
+                alt="Profilbild 3"
+              />
+            </div>
+
+            <div class="w-full shrink-0 snap-start relative sm:h-full">
+              <p class="experience__text absolute bg-card-color/50 p-5">
+                <strong>Für mich</strong
+                ><em
+                  >steht der Mensch im Mittelpunkt jeder Strategie. Echtes
+                  HR-Management lebt von Empathie, Offenheit und Wertschätzung.
+                  Ich bin überzeugt: Erst durch gelebte Vielfalt und
+                  unterschiedliche Perspektiven entstehen die Innovationen und
+                  die Kultur, die Unternehmen langfristig erfolgreich und
+                  zukunftsfähig machen.</em
+                >
+              </p>
+              <img
+                id="slide-4"
+                class="object-cover w-full h-full"
+                src="/src/assets/img/hero_talk.webp"
+                alt="Profilbild 4"
+              />
+            </div>
+          </div>
+
+          <!-- Punkte -->
+          <div
+            class="flex justify-center gap-2 mt-4 sm:mt-0 sm:py-2 sm:shrink-0"
+          >
+            <a
+              href="#slide-1"
+              class="w-3 h-3 bg-gray-400 rounded-full hover:bg-black transition-colors"
+            ></a>
+            <a
+              href="#slide-2"
+              class="w-3 h-3 bg-gray-400 rounded-full hover:bg-black transition-colors"
+            ></a>
+            <a
+              href="#slide-3"
+              class="w-3 h-3 bg-gray-400 rounded-full hover:bg-black transition-colors"
+            ></a>
+            <a
+              href="#slide-4"
+              class="w-3 h-3 bg-gray-400 rounded-full hover:bg-black transition-colors"
+            ></a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -44,24 +155,10 @@
     <main class="main-content">
       <!-- HERO SECTION BLOCK -->
       <section class="hero">
-        <div class="hero__container h-[93vh]">
-          <div
-            class="hero__content bg-hero-img h-full bg-cover bg-position-[65%_center] flex flex-col justify-between max-w-200 mx-auto"
-          >
-            <h1
-              class="hero__title bg-bg-header/50 text-5xl text-text-inverted text-center"
-            >
-              Marie Mustermann
-            </h1>
-            <div class="">
-              <p
-                class="hero__subtitle bg-bg-header/40 text-text-inverted italic p-2"
-              >
-                Weil Erfolg immer mit Menschen beginnt. Sub-Headline: Als Head
-                of Human Resources verbinde ich strategisches HR-Management mit
-                einer Kultur, in der Talente über sich hinauswachsen
-              </p>
-            </div>
+        <div class="">
+          <div class="">
+            <h1 class="">Marie Mustermann</h1>
+            <div class=""></div>
           </div>
         </div>
         <div class="hero__actions">
