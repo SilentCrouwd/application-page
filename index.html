@@ -1,310 +1,335 @@
 <!doctype html>
 <html lang="de">
   <head>
+    <!-- Standard Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Application-Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Marie Mustermann – Head of Human Resources</title>
+    <meta
+      name="description"
+      content="Portfolio und digitale Visitenkarte von Marie Mustermann – Head of Human Resources."
+    />
+    <meta name="author" content="Marie Mustermann" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Marie Mustermann – Head of Human Resources"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio und digitale Visitenkarte von Marie Mustermann – Head of Human Resources."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Marie Mustermann – Head of Human Resources"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio und digitale Visitenkarte von Marie Mustermann – Head of Human Resources."
+    />
+    <meta name="twitter:image" content="/og-image.jpg" />
+
+    <!-- Deine eingebundenen Dateien -->
     <link rel="stylesheet" href="src/style.css" />
     <script type="module" src="src/main.js"></script>
   </head>
-  <body class="">
-    <!-- HEADER BLOCK -->
-    <!--  -->
-    <header class="header h-screen sm:overflow-hidden">
-      <div class="sm:h-full sm:grid sm:grid-cols-[2fr_1fr]">
-        <!-- Navigation (Mobil oben, ab sm rechts) -->
-        <nav
-          class="group/navbar py-4 sm:order-2 sm:py-0 sm:flex sm:items-start sm:justify-center transition-all"
-        >
-          <ul
-            class="navbar__menue flex justify-evenly sm:flex-col sm:gap-15 sm:my-15 underline underline-offset-4"
-          >
-            <li>
-              <a
-                href="#about"
-                class="header__menu-link-1 text-3xl sm:text-5xl sm:opacity-0 sm:group-hover/navbar:opacity-100 duration-700"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#about"
-                class="header__menu-link-1 text-3xl sm:text-5xl sm:opacity-0 sm:group-hover/navbar:opacity-100 duration-700"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="header__menu-link-1 text-3xl sm:text-5xl sm:opacity-0 sm:group-hover/navbar:opacity-100 duration-700"
-              >
-                Kontakt</a
-              >
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Carousel (Mobil unter Nav, ab sm links & flexibel eingepasst) -->
-        <div
-          class="header__left sm:flex sm:flex-col sm:h-full sm:min-h-0 sm:order-1"
-        >
-          <!-- Scroll-Container -->
+  <!-- Zentriertes Layout für große Bildschirme mit sauberen Rändern -->
+  <body class="max-w-[1400px] mx-auto p-4 bg-bg-color-main min-h-screen">
+    <main class="flex flex-col gap-6">
+      <!-- HERO-SECTION: Bento-Grid im 3-Spalten-Raster -->
+      <section class="hero__section">
+        <article class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <!-- Kachel 1: Profilbild (1 Spalte, 1:1 Quadrat) -->
           <div
-            class="py-4 gap-3 flex w-full overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none sm:flex-1 sm:min-h-0"
+            class="bg-bg-header border border-border-color rounded-4xl overflow-hidden aspect-square"
           >
-            <div class="w-full shrink-0 snap-start relative sm:h-full">
-              <p
-                class="absolute bottom-0 w-full text-center text-3xl bg-card-color/50 p-5 text-text-main"
-              >
-                Marie Mustermann<br />
-                <span class="italic"> Head of Human Resources</span>
-              </p>
-              <img
-                id="slide-1"
-                class="object-cover w-full h-full"
-                src="/src/assets/img/hero_stand.webp"
-                alt="Profilbild 1"
-              />
-            </div>
-
-            <div class="w-full shrink-0 snap-start relative sm:h-full">
-              <p class="absolute top-0 p-5 bg-card-color/50">
-                <em>
-                  <strong>Weil Erfolg</strong> immer mit Menschen beginnt.
-                  Sub-Headline: Als Head of Human Resources verbinde ich
-                  strategisches HR-Management mit einer Kultur, in der Talente
-                  über sich hinauswachsen
-                </em>
-              </p>
-              <img
-                id="slide-2"
-                class="object-cover w-full h-full"
-                src="/src/assets/img/hero_leane.webp"
-                alt="Profilbild 2"
-              />
-            </div>
-
-            <div class="w-full shrink-0 relative snap-start sm:h-full">
-              <p
-                class="experience__text absolute bottom-0 bg-card-color/50 p-5"
-              >
-                <strong>Moderne Führung</strong>
-                <em
-                  >bedeutet für mich, Räume für Vertrauen und persönliches
-                  Wachstum zu schaffen. Starke Teams entstehen nicht von allein
-                  – sie wachsen durch echten Zusammenhalt und eine gemeinsame
-                  Vision. Als Führungskraft begleite ich Menschen auf Augenhöhe
-                  und befähige sie, gemeinsam Großes zu erreichen.</em
-                >
-              </p>
-              <img
-                id="slide-3"
-                class="object-cover w-full h-full"
-                src="/src/assets/img/hero_desk.webp"
-                alt="Profilbild 3"
-              />
-            </div>
-
-            <div class="w-full shrink-0 snap-start relative sm:h-full">
-              <p class="experience__text absolute bg-card-color/50 p-5">
-                <strong>Für mich</strong
-                ><em
-                  >steht der Mensch im Mittelpunkt jeder Strategie. Echtes
-                  HR-Management lebt von Empathie, Offenheit und Wertschätzung.
-                  Ich bin überzeugt: Erst durch gelebte Vielfalt und
-                  unterschiedliche Perspektiven entstehen die Innovationen und
-                  die Kultur, die Unternehmen langfristig erfolgreich und
-                  zukunftsfähig machen.</em
-                >
-              </p>
-              <img
-                id="slide-4"
-                class="object-cover w-full h-full"
-                src="/src/assets/img/hero_talk.webp"
-                alt="Profilbild 4"
-              />
-            </div>
+            <img
+              src="src/assets/img/hero_leane.webp"
+              class="w-full h-full object-cover"
+              alt="Marie Mustermann"
+            />
           </div>
 
-          <!-- Punkte -->
+          <!-- Kachel 2: Haupt-Pitch & Name (Nimmt 2 Spalten ein) -->
           <div
-            class="flex justify-center gap-2 mt-4 sm:mt-0 sm:py-2 sm:shrink-0"
+            class="bg-card-color border border-border-color rounded-4xl p-6 flex flex-col justify-between gap-4 sm:col-span-2"
           >
-            <a
-              href="#slide-1"
-              class="w-3 h-3 bg-gray-400 rounded-full hover:bg-black transition-colors"
-            ></a>
-            <a
-              href="#slide-2"
-              class="w-3 h-3 bg-gray-400 rounded-full hover:bg-black transition-colors"
-            ></a>
-            <a
-              href="#slide-3"
-              class="w-3 h-3 bg-gray-400 rounded-full hover:bg-black transition-colors"
-            ></a>
-            <a
-              href="#slide-4"
-              class="w-3 h-3 bg-gray-400 rounded-full hover:bg-black transition-colors"
-            ></a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- MAIN BLOCK -->
-    <main class="main-content">
-      <!-- HERO SECTION BLOCK -->
-      <section class="hero">
-        <div class="">
-          <div class="">
-            <h1 class="">Marie Mustermann</h1>
-            <div class=""></div>
-          </div>
-        </div>
-        <div class="hero__actions">
-          <a href="#contact" class="btn btn__hero__button--primary">Kontakt</a>
-          <a href="#about" class="btn btn__hero__button--secondary"
-            >Mehr erfahren</a
-          >
-        </div>
-      </section>
-      <section class="experience" id="about">
-        <div class="experience__container">
-          <div class="experience__content">
-            <img
-              class="experience__img"
-              src="assets/creativMeeting.jpg"
-              alt="creative Meeting"
-            />
-            <p class="experience__text">
-              <strong>Moderne Führung</strong>
-              <em
-                >bedeutet für mich, Räume für Vertrauen und persönliches
-                Wachstum zu schaffen. Starke Teams entstehen nicht von allein –
-                sie wachsen durch echten Zusammenhalt und eine gemeinsame
-                Vision. Als Führungskraft begleite ich Menschen auf Augenhöhe
-                und befähige sie, gemeinsam Großes zu erreichen.</em
+            <div>
+              <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold">
+                Marie Mustermann
+              </h1>
+              <p class="italic text-text-muted mt-1 lg:text-lg xl:text-xl">
+                Head of Human Resources
+              </p>
+            </div>
+            <p
+              class="italic bg-bg-color-main border border-border-color/50 rounded-3xl p-5 lg:text-lg xl:text-xl"
+            >
+              <strong class="font-bold not-italic block mb-1"
+                >Über mich:</strong
               >
+              Ich verbinde strategisches HR-Management mit moderner
+              Unternehmenskultur. Mein Fokus liegt darauf, Hochleistungsteams
+              aufzubauen und agile Arbeitswelten zu gestalten, in denen
+              Mitarbeiter ihr volles Potenzial entfalten.
             </p>
-          </div>
-          <div class="experience__content experience__content--inverted">
-            <img
-              class="experience__img"
-              src="assets/teamMeeting.jpg"
-              alt="Team Meeting"
-            />
-            <p class="experience__text">
-              <strong>Für mich</strong
-              ><em
-                >steht der Mensch im Mittelpunkt jeder Strategie. Echtes
-                HR-Management lebt von Empathie, Offenheit und Wertschätzung.
-                Ich bin überzeugt: Erst durch gelebte Vielfalt und
-                unterschiedliche Perspektiven entstehen die Innovationen und die
-                Kultur, die Unternehmen langfristig erfolgreich und
-                zukunftsfähig machen.</em
-              >
-            </p>
-          </div>
-          <div class="experience__content">
-            <img
-              class="experience__img"
-              src="assets/vonObenMeeting.jpg"
-              alt="von Oben Meeting"
-            />
-            <p class="experience__text">
-              <strong>Neue Wege</strong>
-              <em>
-                entstehen, indem man sie geht. Mit kreativen Ansätzen und dem
-                Mut, eingetretene Pfade zu verlassen, knacke ich auch komplexe
-                HR-Herausforderungen. Für mich bedeutet Zielorientierung nicht
-                stures Festhalten an alten Mustern, sondern das Finden
-                innovativer, maßgeschneiderter Lösungen für den gemeinsamen
-                Erfolg.</em
-              >
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="contact" id="contact">
-        <div class="contact__container">
-          <div class="contact__header">
-            <p class="contact__headline">Kontakt</p>
           </div>
 
-          <div class="contact__btn-container">
-            <a href="https://de.linkedin.com" class="btn contact__btn"
-              ><svg
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                class="contact__svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"
-                /></svg></a
-            ><a href="https://www.instagram.com/" class="btn contact__btn"
-              ><svg
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                class="contact__svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
-                /></svg
-            ></a>
-          </div>
-          <div class="contact__btn-container">
-            <a href="mailto:info@beispiel.de" class="btn contact__btn"
-              ><svg
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                class="contact__svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
-                /></svg></a
-            ><a href="tel:+495535123456" class="btn contact__btn"
-              ><svg
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                class="contact__svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z"
-                /></svg
-            ></a>
-          </div>
-          <div class="contact__footer">
-            <p class="contact__text">
-              Große Ideen beginnen immer mit einem ersten Gespräch. Kontaktieren
-              Sie mich unkompliziert. Ich bin gespannt auf Ihre Perspektiven und
-              Herausforderungen.
+          <!-- Kachel 3: Führungsstil (2 Spalten im Untergeschoss) -->
+          <div
+            class="bg-card-color border border-border-color rounded-4xl p-6 sm:col-span-2 flex flex-col justify-center"
+          >
+            <h2 class="lg:text-xl xl:text-2xl font-bold mb-1">
+              Mein Führungsstil:
+            </h2>
+            <p class="text-text-muted lg:text-lg xl:text-xl">
+              Coaching auf Augenhöhe statt Mikromanagement. Ich setze auf
+              psychologische Sicherheit, klare Zielvereinbarungen und eine
+              offene Feedbackkultur. Für mich bedeutet Führung, Hindernisse aus
+              dem Weg zu räumen, damit Teams selbstwirksam agieren können.
             </p>
+          </div>
+
+          <!-- Kachel 4: Philosophie (1 Spalte im Untergeschoss) -->
+          <div
+            class="bg-card-color border border-border-color rounded-4xl p-6 sm:col-span-1 flex flex-col justify-center"
+          >
+            <h2 class="lg:text-xl xl:text-2xl font-bold mb-1">
+              HR-Philosophie:
+            </h2>
+            <p class="text-text-muted lg:text-lg xl:text-xl">
+              Menschen machen den Unterschied. Wer im Talentmarkt gewinnen will,
+              muss Empathie mit datengetriebenen Strategien verbinden.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- KOMPETENZEN-SECTION: Bento-Rows im 4-Spalten-Raster -->
+      <section class="kompetenzen flex flex-col gap-3">
+        <!-- Zeile 1: Talent Acquisition & Employer Branding -->
+        <article class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+          <div
+            class="sm:col-span-1 overflow-hidden rounded-4xl h-full min-h-[220px]"
+          >
             <img
-              class="contact__img"
-              src="/assets/profilbild.png"
-              alt="Business Lady"
+              src="src/assets/img/hero_talk.webp"
+              class="object-cover w-full h-full"
+              alt="Marie Mustermann im Gespräch mit Bewerbern"
             />
           </div>
+          <div
+            class="sm:col-span-3 border border-border-color bg-card-color p-6 rounded-4xl flex flex-col justify-center"
+          >
+            <h3 class="lg:text-xl xl:text-2xl font-bold mb-1">
+              Talent Acquisition & Employer Branding
+            </h3>
+            <p class="text-text-muted lg:text-lg xl:text-xl">
+              Aufbau zielgerichteter Active-Sourcing-Strategien und moderner
+              Candidate Journeys. Durch gezieltes Employer Branding konnte ich
+              die Time-to-Hire in meiner vorherigen Position um 35 % senken und
+              gleichzeitig die Qualität der Neueinstellungen nachhaltig
+              steigern.
+            </p>
+          </div>
+        </article>
+
+        <!-- Zeile 2: Organisationsentwicklung & Kulturwandel -->
+        <article class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+          <div
+            class="order-2 sm:order-1 sm:col-span-3 border border-border-color bg-card-color p-6 rounded-4xl flex flex-col justify-center"
+          >
+            <h3 class="lg:text-xl xl:text-2xl font-bold mb-1">
+              Organisationsentwicklung & Change Management
+            </h3>
+            <p class="text-text-muted lg:text-lg xl:text-xl">
+              Begleitung von Transformationsprozessen in wachsenden Unternehmen.
+              Ich habe die Umstellung auf hybride Arbeitsmodelle sowie
+              OKR-Systeme erfolgreich moderiert und Führungskräfte durch
+              umfassende Change-Initiativen gecovert.
+            </p>
+          </div>
+          <div
+            class="order-1 sm:order-2 sm:col-span-1 overflow-hidden rounded-4xl h-full min-h-[220px]"
+          >
+            <img
+              src="src/assets/img/hero_desk.webp"
+              class="object-cover w-full h-full"
+              alt="Marie Mustermann bei der Strategiearbeit am Schreibtisch"
+            />
+          </div>
+        </article>
+
+        <!-- Zeile 3: Kennzahlen & Strategie -->
+        <article class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+          <div
+            class="sm:col-span-1 border border-border-color bg-card-color p-6 rounded-4xl flex flex-col justify-center"
+          >
+            <h3 class="lg:text-xl xl:text-2xl font-bold mb-1">
+              People Analytics
+            </h3>
+            <p class="text-text-muted lg:text-lg xl:text-xl">
+              HR-Entscheidungen basieren bei mir auf fundierten Kennzahlen zu
+              Fluktuation, eNPS und Retention.
+            </p>
+          </div>
+          <div
+            class="sm:col-span-3 border border-border-color bg-card-color p-6 rounded-4xl flex flex-col justify-center"
+          >
+            <h3 class="lg:text-xl xl:text-2xl font-bold mb-1">
+              Performance Management & Talent Development
+            </h3>
+            <p class="text-text-muted lg:text-lg xl:text-xl">
+              Einführung strukturierter Peer-Review-Systeme und individueller
+              Entwicklungspläne. Durch gezielte Weiterbildungsprogramme und
+              Führungskräfte-Workshops konnte die interne Beförderungsquote um
+              25 % gesteigert werden.
+            </p>
+          </div>
+        </article>
+      </section>
+      <!-- KONTAKT-SECTION: Große Bento-Kacheln mit Primary-Glow -->
+      <section class="kontakt flex flex-col gap-4 mt-6">
+        <h2 class="text-2xl font-bold px-2">Lass uns vernetzen</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <!-- E-Mail Kachel -->
+          <a
+            href="mailto:marie@mustermann.de"
+            class="group bg-card-color border border-border-color rounded-4xl p-8 flex flex-col items-center justify-center text-center gap-4 hover:border-primary/60 hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] hover:scale-[1.03] transition-all duration-300"
+          >
+            <!-- Große E-Mail SVG -->
+            <svg
+              class="w-14 h-14 stroke-current text-text-main group-hover:text-primary group-hover:scale-110 transition-all duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg>
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-widest text-text-muted group-hover:text-primary/80 transition-colors"
+              >
+                E-Mail
+              </p>
+              <p class="text-lg font-semibold mt-1">marie@mustermann.de</p>
+            </div>
+          </a>
+
+          <!-- LinkedIn Kachel -->
+          <a
+            href="https://linkedin.com/in/marie-mustermann"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group bg-card-color border border-border-color rounded-4xl p-8 flex flex-col items-center justify-center text-center gap-4 hover:border-primary/60 hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] hover:scale-[1.03] transition-all duration-300"
+          >
+            <!-- Große LinkedIn SVG -->
+            <svg
+              class="w-14 h-14 fill-current text-text-main group-hover:text-primary group-hover:scale-110 transition-all duration-300"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
+              />
+            </svg>
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-widest text-text-muted group-hover:text-primary/80 transition-colors"
+              >
+                LinkedIn
+              </p>
+              <p class="text-lg font-semibold mt-1">/in/marie-mustermann</p>
+            </div>
+          </a>
+
+          <!-- Telefon Kachel -->
+          <a
+            href="tel:+491701234567"
+            class="group bg-card-color border border-border-color rounded-4xl p-8 flex flex-col items-center justify-center text-center gap-4 hover:border-primary/60 hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] hover:scale-[1.03] transition-all duration-300"
+          >
+            <!-- Große Telefon SVG -->
+            <svg
+              class="w-14 h-14 stroke-current text-text-main group-hover:text-primary group-hover:scale-110 transition-all duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.826-1.07-5.02-3.264-6.09-6.09l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"
+              />
+            </svg>
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-widest text-text-muted group-hover:text-primary/80 transition-colors"
+              >
+                Telefon
+              </p>
+              <p class="text-lg font-semibold mt-1">+49 170 123 4567</p>
+            </div>
+          </a>
+
+          <!-- Instagram Kachel -->
+          <a
+            href="https://instagram.com/marie.hr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group bg-card-color border border-border-color rounded-4xl p-8 flex flex-col items-center justify-center text-center gap-4 hover:border-primary/60 hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] hover:scale-[1.03] transition-all duration-300"
+          >
+            <!-- Große Instagram SVG -->
+            <svg
+              class="w-14 h-14 fill-current text-text-main group-hover:text-primary group-hover:scale-110 transition-all duration-300"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-widest text-text-muted group-hover:text-primary/80 transition-colors"
+              >
+                Instagram
+              </p>
+              <p class="text-lg font-semibold mt-1">@marie.hr</p>
+            </div>
+          </a>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER BLOCK -->
-    <footer class="footer">
-      <div class="footer__container">
-        <p class="footer__copy">&copy; 2026 Alle Rechte vorbehalten.</p>
-        <ul class="footer__links">
-          <li class="footer__links-item">
-            <a href="#" class="footer__link">Impressum</a>
-          </li>
-          <li class="footer__links-item">
-            <a href="#" class="footer__link">Datenschutz</a>
-          </li>
-        </ul>
+    <footer
+      class="mt-6 border-t border-border-color pt-6 pb-8 text-text-muted text-sm flex flex-col justify-between items-center gap-4"
+    >
+      <p>© 2026 Marie Mustermann – Alle Rechte vorbehalten.</p>
+
+      <div class="flex items-center gap-6">
+        <a href="#impressum" class="hover:text-text-main transition-colors"
+          >Impressum</a
+        >
+        <a href="#datenschutz" class="hover:text-text-main transition-colors"
+          >Datenschutz</a
+        >
+        <!-- Optional: Schneller Kontakt-Link -->
+        <a
+          href="mailto:marie@mustermann.de"
+          class="hover:text-text-main transition-colors"
+          >Kontakt</a
+        >
       </div>
     </footer>
   </body>
