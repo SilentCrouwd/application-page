@@ -1,53 +1,118 @@
 @import "tailwindcss";
 
-/* 1. Standard-Variablen (Light Mode) */
+/* dark:-Variante folgt data-theme statt der Media-Query */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Design-Tokens – siehe DESIGN.md */
+
+/* 1. Light Mode */
 :root {
-  --color-primary: #37830c;
-  --color-secondary: #328360;
-  --color-border-color: #b1aeae;
-  --color-text-main: #020202;
-  --color-text-muted: #6b7280;
-  --color-inverted: white;
-  --color-card-color: #ffffff;
-  --color-bg-color-main: #e8ebdd;
-  --color-bg-header: rgba(199, 196, 196, 0.932);
+  color-scheme: light;
+  --canvas: #f6f5f4;
+  --card: #ffffff;
+  --surface: #fafaf9;
+  --hairline: #e5e3df;
+  --hairline-strong: #c8c4be;
+  --ink: #1a1a1a;
+  --body: #37352f;
+  --muted: #5d5b54;
+  --subtle: #787671;
+  --primary: #5645d4;
+  --primary-pressed: #4534b3;
+  --tint-lavender: #e6e0f5;
+  --tint-peach: #ffe8d4;
+  --tint-mint: #d9f3e1;
+  --tint-sky: #dcecfa;
+  --shadow-hover: 0 4px 12px 0 rgba(15, 15, 15, 0.08);
 }
 
-/* 2. System-Dark-Mode überschreibt die Variablen */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #60a5fa;
-    --color-secondary: #818cf8;
-    --color-border-color: #151618;
-    --color-text-main: #f9fafb;
-    --color-text-muted: #9ca3af;
-    --color-card-color: #1f2937;
-    --color-bg-color-main: #111827;
-    --color-bg-header: rgb(102, 101, 101);
-    --color-inverted: white;
-  }
+/* 2. Dark Mode – data-theme wird in index.html (Systemeinstellung)
+   bzw. über den Toggle in main.js gesetzt */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #191918;
+  --card: #222220;
+  --surface: #2a2a27;
+  --hairline: #34332f;
+  --hairline-strong: #4a4943;
+  --ink: #f2f1ee;
+  --body: #d6d4ce;
+  --muted: #a4a097;
+  --subtle: #8c8981;
+  --primary: #9a8ff5;
+  --primary-pressed: #b3aaf8;
+  --tint-lavender: #2b2640;
+  --tint-peach: #3a2a1e;
+  --tint-mint: #1e3326;
+  --tint-sky: #1d2b3a;
+  --shadow-hover: 0 4px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
-/* 3. Theme registriert die Utility-Klassen */
-@theme {
-  --color-primary: var(--color-primary);
-  --color-secondary: var(--color-secondary);
-  --color-border-color: var(--color-border-color);
-  --color-text-main: var(--color-text-main);
-  --color-text-muted: var(--color-text-muted);
-  --color-card-color: var(--color-card-color);
-  --color-bg-color-main: var(--color-bg-color-main);
-  --color-bg-header: var(--color-bg-header);
-  --color-text-inverted: var(--color-inverted);
-  --background-image-hero-img: url("/src/assets/img/buisnessLady.webp");
+/* 3. Theme registriert die Utility-Klassen (bg-card, text-muted, ...) */
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+
+  --color-canvas: var(--canvas);
+  --color-card: var(--card);
+  --color-surface: var(--surface);
+  --color-hairline: var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-primary: var(--primary);
+  --color-primary-pressed: var(--primary-pressed);
+  --color-tint-lavender: var(--tint-lavender);
+  --color-tint-peach: var(--tint-peach);
+  --color-tint-mint: var(--tint-mint);
+  --color-tint-sky: var(--tint-sky);
+
+  --shadow-hover: var(--shadow-hover);
 }
 
 @layer base {
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
+  html {
+    -webkit-font-smoothing: antialiased;
   }
 
+  body {
+    @apply bg-canvas text-body font-sans leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-ink font-semibold;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/* Wiederkehrende Bausteine */
+@utility tile {
+  @apply bg-card border border-hairline rounded-2xl p-6 lg:p-8;
+}
+
+@utility tile-img {
+  @apply overflow-hidden rounded-2xl;
+}
+
+@utility tile-title {
+  @apply text-lg lg:text-xl xl:text-[22px] leading-snug mb-2;
+}
+
+@utility tile-text {
+  @apply text-muted lg:text-lg;
+}
+
+@utility eyebrow {
+  @apply text-xs font-semibold uppercase tracking-widest text-subtle;
+}
+
+@utility tile-link {
+  @apply tile flex flex-col items-center justify-center text-center gap-5 transition duration-200 ease-out hover:border-primary/50 hover:shadow-hover hover:-translate-y-0.5;
 }
